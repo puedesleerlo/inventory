@@ -1,0 +1,7 @@
+<p>
+  core works!
+</p>
+<div class="main">
+  <app-list [items]="items" [listType]="listType" [keys]="keys" (selected)="selection($event)"></app-list>
+  <router-outlet></router-outlet>
+</div>
