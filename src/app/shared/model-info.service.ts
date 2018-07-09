@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class ValidationMessagesService {
 
    constructor(private http: HttpClient) { }
-   getAccountValidationMessages() {
-      let apiUrl = './assets/info.json';
-      return this.http.get(apiUrl)
-      .map( (response) => {
-         const data = response;
-         return data['accounts'];
-      });
-   }  
+//    getAccountValidationMessages() {
+//       let apiUrl = './assets/info.json';
+//       return this.http.get(apiUrl)
+//       .map( (response) => {
+//          const data = response;
+//          return data['accounts'];
+//       });
+//    }  
 }

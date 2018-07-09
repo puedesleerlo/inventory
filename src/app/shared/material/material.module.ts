@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
+
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,22 +17,7 @@ import { MatPaginatorModule, MatSelectModule, MatDialogModule } from '@angular/m
 
 
 @NgModule({
-  imports: [
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSortModule,
-    MatTableModule,
-    MatIconModule,
-    MatInputModule,
-    MatCardModule,
-    MatListModule,
-    MatGridListModule,
-    MatCheckboxModule,
-    MatSidenavModule,
-    MatPaginatorModule,
-    MatSelectModule,
-    MatDialogModule
-],
+  imports: [],
   exports: [
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -45,7 +32,8 @@ import { MatPaginatorModule, MatSelectModule, MatDialogModule } from '@angular/m
     MatSidenavModule,
     MatPaginatorModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule
 ],
   declarations: []
 })
