@@ -1,0 +1,66 @@
+{
+    "fields": {
+        "id": {
+            "value": "",
+            "validation": {
+                "required": "hola amigos"
+            },
+            "controlType": "input",
+            "type": "text",
+            "key": "id",
+            "label": "Id"
+        },
+        "name": {
+            "value": "",
+            "validation": {
+                "required": "hola name"
+            },
+            "controlType": "input",
+            "type": "text",
+            "key": "name",
+            "label": "Name"
+        },
+        "unity": {
+            "value": "",
+            "validation": {
+                "required": "hola unity"
+            },
+            "controlType": "select",
+            "options": ["holi", "baby"],
+            "type": "text",
+            "key": "unity",
+            "label": "unity"
+        },
+        "quantity":{
+            "value": 0,
+            "validation": {
+                "required": "hola quantity"
+            },
+            "controlType": "input",
+            "type": "number",
+            "key": "quantity",
+            "label": "quantity"
+        },
+        "department": {
+            "value": "",
+            "validation": {
+                "required": "hola department"
+            },
+            "controlType": "input",
+            "type": "text",
+            "key": "department",
+            "label": "department"
+        },
+        "bill": {
+            "value": "",
+            "validation": {
+                "required": "hola array"
+            },
+            "controlType": "arrayModal",
+            "type": "group",
+            "key": "bill",
+            "label": "Bills",
+            "arraySchema": ""
+        }
+    }
+}

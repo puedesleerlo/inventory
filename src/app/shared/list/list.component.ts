@@ -14,9 +14,9 @@ export class ListComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() keys: string[] = []
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  @Output() selected = new EventEmitter<Object>();
+  @Output() selected = new EventEmitter<Object[]>();
   dataSource = new MatTableDataSource(this.items);
-  selection = new SelectionModel<any>(false, []);
+  selection = new SelectionModel<any>(true, []);
   
   constructor() { }
 
@@ -39,8 +39,7 @@ export class ListComponent implements OnInit, OnChanges, AfterViewInit {
 
   clicked() {
     if(this.selection.hasValue()) {
-      console.log(this.selection.selected[0])
-      this.selected.emit(this.selection.selected[0])
+      this.selected.emit(this.selection.selected)
     }
     
   }

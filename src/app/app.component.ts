@@ -8,7 +8,14 @@ import { Material } from '../models';
 })
 export class AppComponent {
   title = 'app';
-
+  components = []
   constructor() {}
+  selection(ev: string[]) {
+    this.components = ev/* .map(val => {
+      return {
+        path: val.
+      }
+    }) */
+  }
   
 }
