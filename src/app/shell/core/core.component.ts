@@ -14,6 +14,7 @@ export class CoreComponent implements OnInit {
   modelClass: any
   listType = ""
   keys = []
+  lists = []
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -27,8 +28,14 @@ export class CoreComponent implements OnInit {
     })
   }
   
-  selection(ev: Itemize) {
-    this.router.navigate(['./' + ev.id], { relativeTo: this.route });
+  selection(ev: Itemize[]) {
+    this.lists = ev.map(val => {
+      return {
+        path: val.id,
+        label: "form"
+      }
+    })
+    // this.router.navigate(['./' + ev.id], { relativeTo: this.route });
   }
 
 }

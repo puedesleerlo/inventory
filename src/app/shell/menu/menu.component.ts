@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
+  @Output() selected = new EventEmitter<string[]>()
+  selection = new SelectionModel<string>(true, []);
+  features = [
+    {
+      path: "materials",
+      label: "Materials"
+    }
+  ]
   constructor() { }
 
   ngOnInit() {
+  }
+  clicked() {
+      this.selected.emit(this.selection.selected)
   }
 
 }
