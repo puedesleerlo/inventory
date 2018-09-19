@@ -13,6 +13,10 @@ export class MenuComponent implements OnInit {
     {
       path: "materials",
       label: "Materials"
+    },
+    {
+      path: "accounts",
+      label: "Accounts"
     }
   ]
   constructor() { }

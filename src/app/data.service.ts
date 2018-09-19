@@ -1,9 +1,9 @@
 import { Injectable, Type } from '@angular/core';
 import { HandleError, HttpErrorHandler } from './shared/http-error-handler.service';
-
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { HttpParams, HttpHeaders, HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -24,7 +24,7 @@ export class DataService {
   }
 
   setURL(url) {
-    this.url = "api/" + url
+    this.url = /* environment.api + */ url
   }
 
   /** GET heroes from the server */

@@ -1,9 +1,10 @@
 // import * as data from '../config/datastructure.json';
 import { Field } from './model';
+import { Itemize } from './itemize';
 
 //ToDO: Department
 // Class of ChartofAccounts table
-export class Account {
+export class Account extends Itemize {
     chartofaccountsid: string	
     accountname: string	
     costcenter: boolean	
@@ -19,9 +20,18 @@ export class Account {
     typechaccount: string
 
     constructor(...object) {
+        super()
         for(let a in object[0]) {
             this[a] = object[0][a]
         }
+    }
+
+    getKeys() {
+        return Object.keys(new Account())
+    }
+
+    static displayInfo(): string[] {
+        return ["accountname", "costcenter", "isretatsource"]
     }
 
     get _chartofaccountsid(): Field	{
