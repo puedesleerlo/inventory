@@ -1,6 +1,8 @@
 // import * as data from '../config/datastructure.json';
 import { Field } from './model';
 
+//ToDO: Department
+// Class of ChartofAccounts table
 export class Account {
     chartofaccountsid: string	
     accountname: string	
