@@ -1,0 +1,134 @@
+{
+    "accounts": {
+        "chartofaccountsid": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "accountname": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "costcenter": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "percentage": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "isretatsource": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "base": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "usenit": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "luser": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "isactive": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "createat": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "version": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "about": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        },
+        "typechaccount": {
+            "value": 0,
+            "validation": {
+                "required":"text here"
+            },
+            "contolType":"input",
+            "type":"string",
+            "key":"key",
+            "label": "label"
+        }
+    }
+}

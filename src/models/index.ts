@@ -1,5 +1,5 @@
 export * from "./user.model"
-export * from "./account.model"
+export * from "./account"
 export * from "./bill.model"
 export * from "./material"
 export * from "./tool"
