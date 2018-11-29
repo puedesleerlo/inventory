@@ -18,7 +18,6 @@ export class FormShellComponent implements OnInit {
     this.route.data.subscribe((data:{model: any, class: any }) => {
       this.model = new data.class(data.model[0]).getModel()
       // this.model = data.model
-      console.log(data.model)
     })
   }
   save(data) {

@@ -63,8 +63,9 @@ const appRoutes: Routes = [
       items: ResolverApi
     },
     data: {
-      api: environment.api + "chartofaccounts",
+      api: environment.api2 + "chartofaccounts",
       listType: "table",
+      idName: "chartofaccountsid",
       class: Account
     },
     children: [
@@ -76,7 +77,8 @@ const appRoutes: Routes = [
         },
         data: {
           class: Account,
-          api: environment.api + "chartofaccounts"
+          api: environment.api2 + "chartofaccounts",
+          idName: "chartofaccountsid"
         }
       },
       {
@@ -84,7 +86,7 @@ const appRoutes: Routes = [
         component: FormShellComponent,
         data: {
           model: new Account(),
-          class: Material,
+          class: Account,
           api: environment.api + "chartofaccounts"
         }
       }

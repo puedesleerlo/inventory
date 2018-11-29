@@ -1,29 +1,38 @@
 // import * as data from '../config/datastructure.json';
 import { Field } from './model';
 import { Itemize } from './itemize';
+import * as faker from 'faker/locale/en_US';
 
 //ToDO: Department
 // Class of ChartofAccounts table
 export class Account extends Itemize {
-    chartofaccountsid: string	
-    accountname: string	
-    costcenter: boolean	
-    isretatsource: boolean	
-    percentage: number	
-    base: number	
-    usenit: boolean	
-    luser: string	
-    isactive: boolean	
-    createat: Date	
-    version: number	
-    about: string	
-    typechaccount: string
+    chartofaccountsid: string = "0"	
+    accountname: string	= ""
+    costcenter: boolean	 = true
+    isretatsource: boolean	= true
+    percentage: number	= 0
+    // base: number	= 0
+    // usenit: boolean	= true
+    // luser: string = "ef"
+    // isactive: boolean= true
+    // createat: Date	= new Date()
+    // version: number	= 0
+    // about: string= "sefae"
+    // typechaccount: string = "aesfase"
 
     constructor(...object) {
         super()
         for(let a in object[0]) {
             this[a] = object[0][a]
         }
+    }
+
+    faker() {
+        this.chartofaccountsid = faker.random.uuid(),
+        this.accountname = faker.commerce.productMaterial(),
+        this.costcenter = true
+        this.isretatsource = true;
+        this.percentage = faker.random.number(100);
     }
 
     getKeys() {
@@ -40,7 +49,7 @@ export class Account extends Itemize {
             "validation": {
                 "required":"text here"
             },
-            "contolType":"hidden",
+            "controlType":"hidden",
             "key":"id",
             "label": "id"
         })
@@ -51,10 +60,10 @@ export class Account extends Itemize {
             "validation": {
                 "required":"text here"
             },
-            "contolType":"input",
+            "controlType":"input",
             "type":"string",
-            "key":"key",
-            "label": "label"
+            "key":"accountname",
+            "label": "accountname"
         })
     }
     get _costcenter(): Field	{
@@ -63,18 +72,18 @@ export class Account extends Itemize {
             "validation": {
                 "required":"text here"
             },
-            "contolType":"switch",
+            "controlType":"switch",
             "key":"costcenter",
             "label": "Cost Center"
         })
     }
     get _isretatsource(): Field	{
         return new Field({
-            "value": this._isretatsource,
+            "value": this.isretatsource,
             "validation": {
                 "required":"text here"
             },
-            "contolType":"switch",
+            "controlType":"switch",
             "key":"isretatsource",
             "label": "isretatsource"
         })
@@ -85,7 +94,7 @@ export class Account extends Itemize {
             "validation": {
                 "required":"text here"
             },
-            "contolType":"input",
+            "controlType":"input",
             "type":"number",
             "key":"percentage",
             "label": "percentage"

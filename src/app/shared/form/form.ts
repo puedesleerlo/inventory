@@ -60,7 +60,7 @@ export abstract class Form {
         return this.formBuilder.array(groupForm || [], validators || CustomValidators.lengthArray());
     }
     onValueChanged() {
-        console.log("value changed", this.form)
+        // console.log("value changed", this.form)
         // if (!this.form) { return; }
         // this.formErrors = errorRecursion(this.form, this.validationMessages);
         // if (this.form.errors) {

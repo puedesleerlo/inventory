@@ -34,6 +34,7 @@ export class QuestionComponent implements OnChanges {
   }
 
   ngOnChanges() {
+
   }
   getArrayControl(key) {
     return this.form.get(key);

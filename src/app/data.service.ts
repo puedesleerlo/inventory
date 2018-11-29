@@ -18,6 +18,7 @@ const httpOptions = {
 export class DataService {
   private url = "api/Data"
   private handleError: HandleError;
+  private id = "id"
   constructor(
     private http: HttpClient, public httpErrorHandler: HttpErrorHandler) {
     this.handleError = this.httpErrorHandler.createHandleError('DataService');
@@ -25,6 +26,10 @@ export class DataService {
 
   setURL(url) {
     this.url = /* environment.api + */ url
+  }
+
+  setId(id: string) {
+    this.id = id
   }
 
   /** GET heroes from the server */
@@ -41,7 +46,7 @@ export class DataService {
 
     // Add safe, URL encoded search parameter if there is a search term
     const options = term ?
-     { params: new HttpParams().set('id', term) } : {};
+     { params: new HttpParams().set(this.id, term) } : {};
     return this.http.get<any[]>(this.url, options)
       .pipe(
         catchError(this.handleError<any[]>('searchData', []))

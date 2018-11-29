@@ -12,26 +12,28 @@ export class CoreComponent implements OnInit {
   items: any[]
   item: Model = {}
   modelClass: any
+  idName: string = "id"
   listType = ""
   keys = []
   lists = []
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.route.data.subscribe((data:{items: any, class: Itemize, listType: string }) => {
+    this.route.data.subscribe((data:{items: any, class: Itemize, listType: string, idName?: string }) => {
       console.log(data)
       this.items = data.items
       this.modelClass = data.class
       this.listType = data.listType
       this.item = new this.modelClass().getModel()
       this.keys = this.modelClass.displayInfo()
+      this.idName = data.idName || "id"
     })
   }
   
   selection(ev: Itemize[]) {
     this.lists = ev.map(val => {
       return {
-        path: val.id,
+        path: val[this.idName],
         label: "form"
       }
     })

@@ -4,10 +4,10 @@ export abstract class Itemize {
     static displayInfo(): string[] {
         return []
     }
-    id:string = ""
     static listType: string = ""
     abstract getKeys(): string[]
     getModel(): Model {
+        
         var keys = this.getKeys()
         var modelForm: Model = {}
         keys.forEach((val) => {

@@ -17,7 +17,7 @@ import { HttpErrorHandler } from './shared/http-error-handler.service';
   ],
   imports: [
     BrowserModule,
-    // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
     HttpClientModule,
     SharedModule,
     ShellModule,
